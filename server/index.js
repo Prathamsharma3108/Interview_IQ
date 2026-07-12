@@ -11,7 +11,11 @@ import paymentRouter from "./routes/payment.route.js"
 
 const app = express()
 app.use(cors({
-    origin: ["http://localhost:5173", "https://interviewwiq-eight-psi.vercel.app"],
+    origin: [
+        "http://localhost:5173", 
+        "https://interviewwiq-eight-psi.vercel.app",
+        "https://interview-f0ild075e-pratham-sharmas-projects-fc64ea1a.vercel.app" // Add this one!
+    ],
     credentials: true
 }))
 
