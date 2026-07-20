@@ -14,7 +14,7 @@ app.use(cors({
     origin: [
         "http://localhost:5173", 
         "https://interviewwiq-eight-psi.vercel.app",
-        "https://interview-f0ild075e-pratham-sharmas-projects-fc64ea1a.vercel.app" // Add this one!
+        "https://interview-f0ild075e-pratham-sharmas-projects-fc64ea1a.vercel.app" 
     ],
     credentials: true
 }))
@@ -26,6 +26,13 @@ app.use("/api/auth" , authRouter)
 app.use("/api/user", userRouter)
 app.use("/api/interview" , interviewRouter)
 app.use("/api/payment" , paymentRouter)
+
+// --- ADDED THIS TO CATCH THE HIDDEN CRASH ---
+app.use((err, req, res, next) => {
+    console.error("🚨 CRITICAL BACKEND CRASH:", err.message);
+    console.error("👉 STACK TRACE:", err.stack);
+    res.status(500).json({ success: false, message: "Internal Server Error", error: err.message });
+});
 
 const PORT = process.env.PORT || 6000
 app.listen(PORT , ()=>{
