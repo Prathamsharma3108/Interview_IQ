@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Auth from './pages/Auth'
@@ -11,7 +12,7 @@ import InterviewHistory from './pages/InterviewHistory'
 import Pricing from './pages/Pricing'
 import InterviewReport from './pages/InterviewReport'
 
-export const ServerUrl  = "https://interview-iq-backend.onrender.com"
+export const ServerUrl  = "https://interview-iq-zsap.onrender.com"
 
 function App() {
 
