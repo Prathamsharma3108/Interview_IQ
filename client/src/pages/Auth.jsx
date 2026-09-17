@@ -25,9 +25,12 @@ function Auth({isModel = false}) {
 
             
         } catch (error) {
-            console.log(error)
-              dispatch(setUserData(null))
-        }
+    console.error("GOOGLE AUTH ERROR:", error);
+    console.error("ERROR CODE:", error.code);
+    console.error("ERROR MESSAGE:", error.message);
+
+    dispatch(setUserData(null));
+}
     }
   return (
     <div className={`
