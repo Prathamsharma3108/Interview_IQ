@@ -1,20 +1,20 @@
-
 import { initializeApp } from "firebase/app";
-import {getAuth, GoogleAuthProvider} from "firebase/auth"
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCVOOSn-rS7sbynWQJowTmsEzJ7cwWOciI",
-  authDomain: "interviewiq-cca8f.firebaseapp.com",
-  projectId: "interviewiq-cca8f",
-  storageBucket: "interviewiq-cca8f.firebasestorage.app",
-  messagingSenderId: "1095771146228",
-  appId: "1:1095771146228:web:4c8840f3af69075b1c9ba1",
-  measurementId: "G-HQZTRLKHSC"
+  apiKey: "AIzaSyAdOGTYF5lZraGvu0zWtMil6SB0NN0M6nk",
+  authDomain: "interviewiq-ddc17.firebaseapp.com",
+  projectId: "interviewiq-ddc17",
+  storageBucket: "interviewiq-ddc17.firebasestorage.app",
+  messagingSenderId: "769403217321",
+  appId: "1:769403217321:web:35211415e029d234d650b8",
+  measurementId: "G-1CMYW9ZLHX"
 };
 
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app);
 
-const provider = new GoogleAuthProvider()
+const provider = new GoogleAuthProvider();
 
-export {auth , provider}
+export { auth, provider };
