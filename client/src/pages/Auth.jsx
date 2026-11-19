@@ -14,6 +14,9 @@ function Auth({isModel = false}) {
 
     const handleGoogleAuth = async () => {
         try {
+            console.log("Current hostname:", window.location.hostname);
+        console.log("Firebase auth domain:", auth.app.options.authDomain);
+        console.log("Firebase project ID:", auth.app.options.projectId)
             const response = await signInWithPopup(auth,provider)
             let User = response.user
             let name = User.displayName
