@@ -21,7 +21,7 @@ app.use(
     cors({
         origin: [
             "http://localhost:5173",
-            "https://interviewwiq-eight-psi.vercel.app",
+            "https://interviewiq-eight-psi.vercel.app",
             "https://interview-f0ild075e-pratham-sharmas-projects-fc64ea1a.vercel.app"
         ],
         credentials: true
